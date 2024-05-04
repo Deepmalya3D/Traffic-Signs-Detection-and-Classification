@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Sign Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            flex-direction: column; /* Added */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px; /* Adjusted */
+        }
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Road Sign Detection</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required><br><br>
+        <button type="submit">Detect Road Sign Board</button>
+    </form>
+     {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
